@@ -11,7 +11,7 @@ PWD	:= $(shell pwd)
 all:	modules
 
 modules:
-	$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) modules
+	$(MAKE) -C $(KDIR) M=$(PWD) modules
 
 clean:
 	$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) clean
